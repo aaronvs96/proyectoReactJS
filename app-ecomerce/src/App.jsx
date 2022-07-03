@@ -3,7 +3,6 @@ import { useState } from 'react'
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/container/ItemListContainer';
 
-import logo from './logo.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'; //importando boostrap
 
