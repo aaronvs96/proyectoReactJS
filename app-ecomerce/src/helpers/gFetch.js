@@ -1,39 +1,39 @@
 const productos = [
     { 
         id: 1, 
-        nombre: 'producto1', 
-        precio: '10',
+        nombre: 'BAJAJ Boxer 100 2021', 
+        precio: '1500',
         img: '../../src/img/bajaj-boxer-100-2021.png'
     },
     { 
         id: 2, 
-        nombre: 'producto2', 
+        nombre: 'Honda Twister 2022', 
         precio: '10',
-        img: '../../src/img/bajaj-boxer-100-2021.png'
+        img: '../../src/img/honda-cb125f-twister-2022.png'
     },
     { 
         id: 3, 
-        nombre: 'producto3', 
+        nombre: 'Honda Navi 2022', 
         precio: '10',
-        img: '../../src/img/bajaj-boxer-100-2021.png'
+        img: '../../src/img/honda-navi-110-2022.png'
     },
     { 
         id: 4, 
-        nombre: 'producto4', 
+        nombre: 'Honda V-Blade 2021', 
         precio: '10',
-        img: '../../src/img/bajaj-boxer-100-2021.png'
+        img: '../../src/img/honda-x-blade-2021.png'
     },
     { 
         id: 5, 
-        nombre: 'producto5', 
+        nombre: 'Nexus 110a 2021', 
         precio: '10',
-        img: '../../src/img/bajaj-boxer-100-2021.png'
+        img: '../../src/img/nexus-110a-2021.png'
     },
     { 
         id: 6, 
-        nombre: 'producto6', 
+        nombre: 'Nexus 150dk 2021', 
         precio: '10',
-        img: '../../src/img/bajaj-boxer-100-2021.png'
+        img: '../../src/img/nexus-150dk-2021.png'
     }
 ]
 
