@@ -2,7 +2,7 @@ import {Container, Nav, Navbar} from 'react-bootstrap';
 
 import Titulo from '../Titulo/Titulo'
 import CarWidget from './CarWidget'
-import './NavBar.css'
+// import './NavBar.css'
 
 const NavBar = () => {
 

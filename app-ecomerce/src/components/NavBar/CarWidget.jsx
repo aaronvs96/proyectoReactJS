@@ -1,5 +1,4 @@
 import {Nav} from 'react-bootstrap';
-import './NavBar.css'
 
 const CarWidget = () => {
 

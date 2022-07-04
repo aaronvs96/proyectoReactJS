@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { gFetch } from '../../helpers/gFetch';
 import ItemList from './ItemList';
-import './ItemListContainer.css'
 
 const ItemListContainer = () => {
 
