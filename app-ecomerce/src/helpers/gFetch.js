@@ -8,38 +8,38 @@ const productos = [
     },
     { 
         id: 2, 
-        nombre: 'Honda Twister 2022', 
-        marca: 'SUZUKI',
-        precio: '10',
-        img: '../../src/img/honda-cb125f-twister-2022.png'
+        nombre: 'Honda Navi 2021', 
+        marca: 'HONDA',
+        precio: '1500',
+        img: '../../src/img/honda-navi-110-2021-blanco-15cc6f.png'
     },
     { 
         id: 3, 
-        nombre: 'Honda Navi 2022', 
-        marca: 'SUZUKI',
-        precio: '10',
-        img: '../../src/img/honda-navi-110-2022.png'
+        nombre: 'RTM 110 Urbana', 
+        marca: 'RTM',
+        precio: '1785',
+        img: '../../src/img/rtm-110-urbana-2021-negro-c82589.png'
     },
     { 
         id: 4, 
-        nombre: 'Honda V-Blade 2021', 
-        marca: 'SUZUKI',
-        precio: '10',
-        img: '../../src/img/honda-x-blade-2021.png'
+        nombre: 'Ssenda Duro 2021', 
+        marca: 'SSENDA',
+        precio: '1245',
+        img: '../../src/img/ssenda-duro-200-2021-rojo-d521c7.png'
     },
     { 
         id: 5, 
-        nombre: 'Nexus 110a 2021', 
-        marca: 'SUZUKI',
-        precio: '10',
-        img: '../../src/img/nexus-110a-2021.png'
+        nombre: 'Ssenda New Eco Finiti 2021', 
+        marca: 'SSENDA',
+        precio: '1620',
+        img: '../../src/img/ssenda-new-eco-finiti-150-2021-rojo-fb6a4e.png'
     },
     { 
         id: 6, 
-        nombre: 'Nexus 150dk 2021', 
-        marca: 'SUZUKI',
+        nombre: 'Wanxin ET150 2022', 
+        marca: 'WANXIN',
         precio: '10',
-        img: '../../src/img/nexus-150dk-2021.png'
+        img: '../../src/img/wanxin-et150-2022-negro-a9f0b2.png'
     }
 ]
 
@@ -51,6 +51,6 @@ export const gFetch = new Promise((resolve, reject) => {
         }, 2000)
         
     } else {
-        reject('algo anda mal')
+        reject('Ha ocurrido un problema')
     }
 });

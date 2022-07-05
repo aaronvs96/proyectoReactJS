@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { Spinner } from 'react-bootstrap';
 import { gFetch } from '../../helpers/gFetch';
+import Footer from '../Footer/Footer';
 import ItemList from '../ItemList/ItemList';
-// import ItemList from './ItemList/ItemList';
 
 const ItemListContainer = () => {
 
@@ -33,10 +33,9 @@ const ItemListContainer = () => {
       :
       <ItemList producto={products}/>      
       }
+      <Footer/>
     </div>
-  )
-
-  
+  )  
 }
 
 
