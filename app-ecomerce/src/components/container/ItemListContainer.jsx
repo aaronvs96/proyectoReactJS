@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { Spinner } from 'react-bootstrap';
 import { gFetch } from '../../helpers/gFetch';
-import ItemList from './ItemList';
+import ItemList from '../ItemList/ItemList';
+// import ItemList from './ItemList/ItemList';
 
 const ItemListContainer = () => {
 
@@ -22,29 +24,20 @@ const ItemListContainer = () => {
       })
     },[])
 
-  // console.log(products)
 
-    // return (
-    //   <div>
-    //     {[1,2,3,4].map( nro => <li>{nro}</li>)}
-    //   </div>
-    // )
   return  (
     <div>
-      {loading ? <h2>cargando...</h2>
+      {loading ?  <span >Cargando...
+                    <Spinner animation="border" variant="success" />
+                  </span>
       :
-      <ItemList producto={products}/>
-      
+      <ItemList producto={products}/>      
       }
     </div>
   )
 
   
 }
-
-// ItemListContainer.defaultProps = { //en caso no se mande ningun valor en el prop greeting
-//   greeting: 'Bienvenidos'
-// }
 
 
 export default ItemListContainer
