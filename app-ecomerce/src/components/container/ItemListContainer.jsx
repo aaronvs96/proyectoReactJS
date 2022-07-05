@@ -10,7 +10,7 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(()=>{
+  useEffect(() => {
     /*llamando a la funcion gFetch que está en ItemList */
     gFetch //simular llamado a una api
       .then((resp) => {
@@ -19,23 +19,24 @@ const ItemListContainer = () => {
       .catch((err) => {
         console.log(err)
       })
-      .finally(()=>{
+      .finally(() => {
         setLoading(false)
       })
-    },[])
+  }, [])
 
 
-  return  (
+  return (
     <div>
-      {loading ?  <span >Cargando...
-                    <Spinner animation="border" variant="success" />
-                  </span>
+      {loading ? 
+        <span >Cargando...
+        <Spinner animation="border" variant="success" />
+        </span>
       :
-      <ItemList producto={products}/>      
+        <ItemList producto={products} />
       }
-      <Footer/>
+      <Footer />
     </div>
-  )  
+  )
 }
 
 
