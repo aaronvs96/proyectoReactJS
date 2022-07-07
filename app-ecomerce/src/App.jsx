@@ -1,9 +1,15 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/container/ItemListContainer';
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'; //importando boostrap
 import { useEffect, useState } from 'react';
+import ItemDetailContainer from './components/container/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/container/Cart/Cart';
+import Footer from './components/Footer/Footer';
 
 
 function App() { // este es un componente de react
@@ -13,29 +19,34 @@ function App() { // este es un componente de react
       const query = await fetch(url) //query captura la respuesta del fetch
       const queryParse = await query.json()//parsear la respuesta
 
-      console.table(queryParse.results)
+      queryParse.forEach(element => {
+        console.log(element)
+      });
 
     } catch (error) {
       console.log(error)
     }
-
-    // .then(resp => resp.json())
-    // .then(data => console.table(data))
-    // .catch(error => console.log(error))
   }
 
   useEffect(() => {
-    // const url = '../assets/data_personas.json'
-    const url = 'https://pokeapi.co/api/v2/pokemon/?offset=20'
+    const url = '../assets/data_personas.json'
     getFetchApi(url);
   }, [])
 
 
   return ( //un componente siempre retorna un jsx
-    <div className='App'>
-      <NavBar />
-      <ItemListContainer />
-    </div>
+    <BrowserRouter > {/* primero importamos BrowserRouter, Routes y Route para aplicar las urls */}
+      <div className='App'>
+        <NavBar /> {/*el NavBar no tiene una vista particular, por eso no va dentro de Routes*/}
+        <Routes> {/*dentro del Routes tiene que ir todos los componente que van a tener una vista en particular*/}
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/detalle' element={<ItemDetailContainer />} />
+          <Route path='/cart' element={<Cart />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
+
   )
 }
 

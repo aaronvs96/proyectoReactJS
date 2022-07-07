@@ -34,7 +34,7 @@ const ItemListContainer = () => {
       :
         <ItemList producto={products} />
       }
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
