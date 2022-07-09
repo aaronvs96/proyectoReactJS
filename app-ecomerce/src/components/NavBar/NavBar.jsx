@@ -1,4 +1,5 @@
-import {Container, Nav, Navbar} from 'react-bootstrap';
+import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 
 import Titulo from '../Titulo/Titulo'
 import CarWidget from './CarWidget'
@@ -12,30 +13,25 @@ const NavBar = () => {
    
     <Navbar className="navbar navbar-expand-lg navbar-dark bg-dark" expand="lg">
       <Container>
-        <Navbar.Brand href="../index.html">
+        <NavLink to='/'>
           <Titulo />
-        </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="../index.html">Inicio</Nav.Link>
-            <Nav.Link href="#link">Nosotros</Nav.Link>
-            <Nav.Link href="#link">Productos</Nav.Link>
-            <Nav.Link href="#link">Cotizacion</Nav.Link>
-            <CarWidget />
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+            <NavLink to='/' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Inicio</NavLink>
+            <NavLink to='/nosotros' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Nosotros</NavLink>
+            <NavLink to='/categoria/pisteras' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Pisteras</NavLink>
+            <NavLink to='/categoria/deportivas' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Deportivas</NavLink>
+            <NavLink to='/cotizacion' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Cotizacion</NavLink>
+            <Link to='/cart'>
+              <CarWidget />
+            </Link>           
+            {/* <NavDropdown>
+              <NavLink to='/categoria/pisteras' className='nav-link'>Pisteras</NavLink>
             </NavDropdown> */}
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse>      
       </Container>
     </Navbar>
 

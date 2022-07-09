@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 //FORMATO DOLARES
 const formatoDolares = (monto) => {
@@ -13,17 +14,19 @@ const formatoDolares = (monto) => {
 
 const Item = ({ products }) => {
 
-  const { id, nombre, precio, img } = products;
+  const { id, nombre, marca, categoria, precio, img } = products;
 
   return (
 
       <Card className="text-center mt-3 w-25 mx-1 shadow">
-      <Card.Header as="h5">{nombre}</Card.Header>
+      <Card.Header as="h5">{nombre}-{categoria}</Card.Header>
       <Card.Img variant="top" src={img} className="p-2" />
       <Card.Body>
         {/* <Card.Title>{nombre}</Card.Title> */}
         <Card.Text>{formatoDolares(precio)}</Card.Text>
-        <Button style={{background:"#2ba977",border: "#2ba977"}}>Ver más</Button>
+        <Link to={`/detalle/${id}`}>
+          <Button style={{background:"#2ba977",border: "#2ba977"}}>Ver más</Button>
+        </Link>        
       </Card.Body>
     </Card>
   )

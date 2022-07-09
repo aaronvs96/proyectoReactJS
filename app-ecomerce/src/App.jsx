@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/container/ItemListContainer';
@@ -20,7 +19,7 @@ function App() { // este es un componente de react
       const queryParse = await query.json()//parsear la respuesta
 
       queryParse.forEach(element => {
-        console.log(element)
+        // console.log(element)
       });
 
     } catch (error) {
@@ -39,9 +38,16 @@ function App() { // este es un componente de react
       <div className='App'>
         <NavBar /> {/*el NavBar no tiene una vista particular, por eso no va dentro de Routes*/}
         <Routes> {/*dentro del Routes tiene que ir todos los componente que van a tener una vista en particular*/}
-          <Route path='/' element={<ItemListContainer />} />
+          <Route index path='/' element={<ItemListContainer />} />
+          <Route path='/nosotros' element={<ItemListContainer />} />
+          <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
+          <Route path='/cotizacion' element={<ItemListContainer />} />
           <Route path='/detalle' element={<ItemDetailContainer />} />
+          <Route path='/detalle/:id_moto' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
+          {/* <Route path='/404' element={ <404notFound /> }/>  */}
+
+          <Route path='*' element={ <Navigate to='/' /> }/> {/* cuando se ingresa una ruta que no existe */}
         </Routes>
         <Footer />
       </div>
