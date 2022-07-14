@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import { gFetch } from '../../helpers/gFetch';
-import Footer from '../Footer/Footer';
-import ItemList from '../ItemList/ItemList';
+import { gFetch } from '../../../helpers/gFetch';
+import Footer from '../../Footer/Footer';
+import ItemList from '../../ItemList/ItemList';
 
 const ItemListContainer = () => {
 

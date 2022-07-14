@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/container/ItemListContainer';
+import ItemListContainer from './components/container/ItemListContainer/ItemListContainer';
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'; //importando boostrap
