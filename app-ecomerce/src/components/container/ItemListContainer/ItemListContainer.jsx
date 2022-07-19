@@ -16,7 +16,8 @@ const ItemListContainer = () => {
     if (categoriaId) {
       gFetch //simular llamado a una api
       .then((resp) => {
-        setProducts(resp.filter((prod) => prod.categoria === categoriaId))
+          setProducts(resp.filter((prod) => prod.categoria === categoriaId))  
+        
       })
       .catch((err) => {
         console.log(err)

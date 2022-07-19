@@ -9,7 +9,7 @@ const productos = [
     },
     { 
         id: '2', 
-        nombre: 'Honda Navi 2021', 
+        nombre: 'Honda Navi 110', 
         marca: 'HONDA',
         categoria: 'pisteras',
         precio: '1500',
@@ -60,3 +60,20 @@ export const gFetch = new Promise((resolve, reject) => {
         reject('Ha ocurrido un problema')
     }
 });
+
+
+// export const gFetch = new Promise((resolve, reject) => {
+//     let condicion = true;
+//     if (condicion) {
+//         setTimeout(()=>{
+//             fetch("../../assets/data.json")
+//             .then((resp)=>resp.json())
+//             .then((productos) =>{
+//                 resolve(productos)
+//             })
+//         }, 2000);
+        
+//     } else {
+//         reject('Ha ocurrido un problema')
+//     }
+// });

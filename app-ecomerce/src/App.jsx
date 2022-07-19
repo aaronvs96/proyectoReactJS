@@ -28,7 +28,7 @@ function App() { // este es un componente de react
   }
 
   useEffect(() => {
-    const url = '../assets/data_personas.json'
+    const url = '../assets/data.json'
     getFetchApi(url);
   }, [])
 
@@ -38,8 +38,9 @@ function App() { // este es un componente de react
       <div className='App'>
         <NavBar /> {/*el NavBar no tiene una vista particular, por eso no va dentro de Routes*/}
         <Routes> {/*dentro del Routes tiene que ir todos los componente que van a tener una vista en particular*/}
-          <Route index path='/' element={<ItemListContainer />} />
-          <Route path='/nosotros' element={<ItemListContainer />} />
+          <Route index path='/' element={<h1>ESTE ES LA HOME</h1>} />
+          <Route path='/nosotros' element={<h1>ESTE ES LA HOJA NOSOTROS</h1>} />
+          <Route path='/catalogo' element={<ItemListContainer/>} />
           <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
           <Route path='/cotizacion' element={<ItemListContainer />} />
           <Route path='/detalle' element={<ItemDetailContainer />} />
