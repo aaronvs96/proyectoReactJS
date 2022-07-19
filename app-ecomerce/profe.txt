@@ -1,0 +1,6 @@
+Hola Israel, no se por que no me deja dejarte devolucion.
+Te lo deje aprobado por que esta funcionando pero fijate de leer bien el desafio… 
+El “ComponenteContenedor” debe llamar “itemListContainer” que es el componente encargado de contener 
+y mostrar todos los productos en nuestra app .
+Ese mismo itemListContainer tiene que contener una prop “greeting” 
+Lo principal del desafio igualmente esta, que es tener el menu. Saludos!

@@ -1,0 +1,81 @@
+const productos = [
+    { 
+        id: '1', 
+        nombre: 'Suzuki Gixxer 2022 negro',
+        marca: 'SUZUKI',
+        categoria: 'pisteras',
+        precio: '3099',
+        img: '../../src/img/suzuki-gixxer-155-2022-negro-43eca5.png'
+    },
+    { 
+        id: '2', 
+        nombre: 'Honda Navi 110', 
+        marca: 'HONDA',
+        categoria: 'pisteras',
+        precio: '1500',
+        img: '../../src/img/honda-navi-110-2021-blanco-15cc6f.png'
+    },
+    { 
+        id: '3', 
+        nombre: 'RTM 110 Urbana', 
+        marca: 'RTM',
+        categoria: 'pisteras',
+        precio: '1785',
+        img: '../../src/img/rtm-110-urbana-2021-negro-c82589.png'
+    },
+    { 
+        id: '4', 
+        nombre: 'Ssenda Duro 2021', 
+        marca: 'SSENDA',
+        categoria: 'deportivas',
+        precio: '1245',
+        img: '../../src/img/ssenda-duro-200-2021-rojo-d521c7.png'
+    },
+    { 
+        id: '5', 
+        nombre: 'Ssenda New Eco Finiti 2021', 
+        marca: 'SSENDA',
+        categoria: 'deportivas',
+        precio: '1620',
+        img: '../../src/img/ssenda-new-eco-finiti-150-2021-rojo-fb6a4e.png'
+    },
+    { 
+        id: '6', 
+        nombre: 'Wanxin ET150 2022', 
+        marca: 'WANXIN',
+        categoria: 'deportivas',
+        precio: '10',
+        img: '../../src/img/wanxin-et150-2022-negro-a9f0b2.png'
+    }
+]
+
+// export const gFetch = new Promise((resolve, reject) => {
+//     let condicion = true;
+//     if (condicion) {
+//         setTimeout(()=>{
+//             resolve(productos);
+//         }, 2000)
+        
+//     } else {
+//         reject('Ha ocurrido un problema')
+//     }
+// });
+
+
+export const gFetch = new Promise((resolve, reject) => {
+    let condicion = true;
+    if (condicion) {
+        setTimeout(()=>{
+            fetch("../../assets/data.json")
+            .then((resp)=>resp.json())
+            .then((productos) =>{
+                resolve(productos)
+            })
+        }, 2000);
+        
+    } else {
+        reject('Ha ocurrido un problema')
+    }
+});
+
+

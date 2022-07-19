@@ -1,0 +1,8 @@
+.mostrarElementos{
+    visibility: visible;
+}
+
+
+.ocultarElementos{
+    display: none;
+}
