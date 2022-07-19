@@ -21,7 +21,7 @@ const NavBar = () => {
           <Nav className="me-auto">
             <NavLink to='/' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Inicio</NavLink>
             <NavLink to='/nosotros' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Nosotros</NavLink>
-            <NavLink to='/catalogo' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Catalogo</NavLink>
+            <NavLink to='/catalogo' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Catalogooooo</NavLink>
             {/* <NavLink to='/categoria/pisteras' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Pisteras</NavLink>
             <NavLink to='/categoria/deportivas' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Deportivas</NavLink> */}
             <NavLink to='/cotizacion' className={({isActive})=> isActive ? 'nav-link active' : 'nav-link'}>Cotizacion</NavLink>
